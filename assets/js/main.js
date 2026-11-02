@@ -21,6 +21,11 @@
       var val = el.getAttribute('data-alt-' + lang);
       if (val !== null) el.setAttribute('alt', val);
     });
+    // Liên kết đổi theo ngôn ngữ (ví dụ: CV tiếng Việt / tiếng Anh)
+    document.querySelectorAll('[data-href-vi]').forEach(function (el) {
+      var val = el.getAttribute('data-href-' + lang);
+      if (val !== null) el.setAttribute('href', val);
+    });
     // Tiêu đề trang + thẻ mô tả
     var t = document.body.getAttribute('data-title-' + lang);
     if (t) document.title = t;
